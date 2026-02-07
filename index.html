@@ -627,6 +627,77 @@
         font-weight: 800;
         line-height: 1.5;
       }
+      @keyframes fwCore {
+        0% {
+          opacity: 0;
+          transform: scale(0.2);
+        }
+        12% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+      }
+
+      @keyframes fwRing {
+        0% {
+          opacity: 0;
+          transform: scale(0.25);
+        }
+        14% {
+          opacity: 0.95;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(2.4);
+        }
+      }
+
+      @keyframes fwParticle {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+        }
+        14% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate(-50%, -50%) translate3d(var(--dx), var(--dy), 0)
+            scale(0.2);
+        }
+      }
+      @media (max-width: 640px) {
+        .content {
+          padding: 20px 16px;
+        }
+
+        .subline {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+
+        .arena {
+          border-radius: 18px;
+        }
+
+        h1 {
+          font-size: clamp(34px, 8vw, 42px);
+        }
+      }
+      @media (max-height: 520px) {
+        .row {
+          top: 65%;
+        }
+
+        .card {
+          max-height: 96vh;
+        }
+      }
     </style>
   </head>
 
@@ -1054,3 +1125,4 @@
     </script>
   </body>
 </html>
+
